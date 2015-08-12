@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.example.react-cordova" version="0.0.1"
+  xmlns="http://www.w3.org/ns/widgets"
+  xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>react-cordova</name>
+  <description>
+        ES6 Isomorphic ReactJS/Flux/Cordova Boilerplate.
+  </description>
+  <author email="rgaidot@gmail.com" href="http://regis.gaidot.net/">
+    Régis Gaidot
+  </author>
+  <content src="index.html"/>
+  <access origin="*"/>
+</widget>

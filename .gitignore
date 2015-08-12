@@ -1,0 +1,7 @@
+/node_modules
+.DS_Store
+*.log
+.sass-cache/
+plugins
+www/bundle.js
+platforms/
