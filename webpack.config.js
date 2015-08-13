@@ -11,10 +11,12 @@ module.exports = {
     loaders: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        loaders: [
-          require.resolve('babel-loader')
-        ]
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel',
+        query: {
+          optional: ['runtime'],
+          stage: 0
+        }
       },
       {
         test: /\.scss$/,

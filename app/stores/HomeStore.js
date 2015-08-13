@@ -5,7 +5,6 @@ import { STORE_CHANGE } from '../constants/ApplicationConstants';
 
 class HomeStore extends ApplicationStore {
   emitChange() {
-    console.log('STORE_CHANGE');
     this.emit(STORE_CHANGE);
   }
 
