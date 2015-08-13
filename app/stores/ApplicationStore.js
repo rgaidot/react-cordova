@@ -1,6 +1,6 @@
 import ApplicationDispatcher from '../dispatcher/ApplicationDispatcher';
 import ApplicationConstants from '../constants/ApplicationConstants';
-import { EventEmitter } from 'events';
+import EventEmitter from 'events';
 
 export default class ApplicationStore extends EventEmitter {
   constructor() {
@@ -31,3 +31,5 @@ export default class ApplicationStore extends EventEmitter {
     return Array.from(this.data);
   }
 }
+
+ApplicationStore.dispatchToken = null;

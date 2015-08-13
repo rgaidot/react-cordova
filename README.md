@@ -7,6 +7,7 @@ The UI isn't really sexy, I wrote on a half day :-) Just for the fun!
 
 ```
 npm install
+bower install
 npm run serve
 open http://localhost:8080 # On OSX
 ```

@@ -1,7 +1,7 @@
 /node_modules
+/bower_components
 .DS_Store
 *.log
 .sass-cache/
 plugins
 www/bundle.js
-platforms/

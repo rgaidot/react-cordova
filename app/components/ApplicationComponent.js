@@ -5,16 +5,17 @@ import ApplicationActions from '../actions/ApplicationActions';
 export default class ApplicationComponent extends Component {
   render() {
     return <div>
-        <header className='grey'>
-          <h1>react-cordova</h1>
+        <header className='bar bar-nav'>
+          <h1 className='title'>react-cordova</h1>
         </header>
-        <section id='main'>
+        <section id='main' className='content'>
           <RouteHandler />
         </section>
-        <footer className='grey'>
-          <ul className='unstyled'>
-            <li><Link to="home">Home</Link></li>
-          </ul>
+        <footer className='bar bar-tab'>
+          <Link className='tab-item' to="home">
+            <span className="icon icon-home"></span>
+            <span className="tab-label">Home</span>
+          </Link>
         </footer>
      </div>;
   }

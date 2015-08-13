@@ -4,8 +4,11 @@ import ApplicationDispatcher from '../dispatcher/ApplicationDispatcher';
 import { STORE_CHANGE } from '../constants/ApplicationConstants';
 
 class HomeStore extends ApplicationStore {
+  constructor() {
+    super();
+  }
+
   emitChange() {
-    console.log('STORE_CHANGE');
     this.emit(STORE_CHANGE);
   }
 
@@ -20,13 +23,16 @@ class HomeStore extends ApplicationStore {
 
 let store = new HomeStore();
 
-ApplicationDispatcher.register((action) => {
-  switch(action.actionType) {
+
+store.dispatchToken = ApplicationDispatcher.register((action) => {
+  switch(action.type) {
     case STORE_CHANGE:
-      store.setAll(action.items);
+      store.setAll(action.content.contacts);
       break;
     default:
+      return;
   }
+  store.emitChange();
 });
 
 export default store;

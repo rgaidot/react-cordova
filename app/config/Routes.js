@@ -3,10 +3,9 @@ import { Router, Route, RouteHandler, DefaultRoute, NotFoundRoute, State,
   Redirect } from 'react-router';
 import ApplicationComponent from '../components/ApplicationComponent';
 import NotFoundComponent from '../components/NotFoundComponent';
+import HomeComponent from '../components/HomeComponent';
 
-const components = [
-  require('../components/HomeComponent')
-];
+const components = [];
 
 const routes = (
   <Route name="ApplicationComponent" path="/" handler={ApplicationComponent}>
@@ -15,7 +14,7 @@ const routes = (
         path={component.config.path}
         handler={component} key={component.config.name} />;
     })}
-    <DefaultRoute handler={components[0]} />
+    <DefaultRoute handler={HomeComponent} name='home' />
     <NotFoundRoute name="404" handler={NotFoundComponent} />
   </Route>
 );
