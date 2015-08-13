@@ -4,7 +4,7 @@
   xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>react-cordova</name>
   <description>
-        ES6 Isomorphic ReactJS/Flux/Cordova Boilerplate.
+        React Cordova Boilerplate.
   </description>
   <author email="rgaidot@gmail.com" href="http://regis.gaidot.net/">
     Régis Gaidot

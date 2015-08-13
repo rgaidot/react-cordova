@@ -1,0 +1,27 @@
+{
+  "name": "react-cordova",
+  "version": "0.1.0",
+  "homepage": "https://github.com/rgaidot/react-cordova",
+  "description": "ES6 Isomorphic React app using React.js, React Router, Flux, Webpack and Cordova.",
+  "authors": [
+    "Régis Gaidot <rgaidot@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "webpack",
+    "react",
+    "starter",
+    "boilerplate",
+    "cordova"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ratchet": "~2.0.2"
+  }
+}

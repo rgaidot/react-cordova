@@ -1,6 +1,7 @@
-# ES6 Isomorphic ReactJS/Flux/Cordova Boilerplate
+# React Cordova Boilerplate
 
-This is a sample React app, using Webpack, React.js, React Router and Flux.
+[React Cordova](https://github.com/rgaidot/react-cordova) is a ES6 Isomorphic
+React app using React.js, React Router, Flux, Webpack and Cordova.
 The UI isn't really sexy, I wrote on a half day :-) Just for the fun!
 
 ## Running

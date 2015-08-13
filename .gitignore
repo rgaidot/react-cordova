@@ -1,5 +1,6 @@
 /node_modules
 /bower_components
+/platforms
 .DS_Store
 *.log
 .sass-cache/
