@@ -1,6 +1,6 @@
 import Api from '../services/Api';
 
-let url = 'http://addressbook-api.herokuapp.com/contacts';
+let url = 'https://addressbook-api.herokuapp.com/contacts';
 
 class HomeActions {
   getContacts() {

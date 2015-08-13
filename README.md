@@ -3,6 +3,7 @@
 [React Cordova](https://github.com/rgaidot/react-cordova) is a ES6 Isomorphic
 React app using React.js, React Router, Flux, Webpack and Cordova.
 The UI isn't really sexy, I wrote on a half day :-) Just for the fun!
+Web demo: https://react-cordova-demo.herokuapp.com 
 
 ## Running
 
