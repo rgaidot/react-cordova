@@ -14,7 +14,7 @@ const routes = (
         path={component.config.path}
         handler={component} key={component.config.name} />;
     })}
-    <DefaultRoute handler={HomeComponent} name='home' />
+    <DefaultRoute handler={HomeComponent} name='home' key='home' />
     <NotFoundRoute name="404" handler={NotFoundComponent} />
   </Route>
 );

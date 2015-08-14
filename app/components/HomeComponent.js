@@ -34,7 +34,7 @@ export default class HomeComponent extends Component {
         {
           this.state.contacts.map(function(contact) {
             return (
-              <li className='table-view-cell media'>
+              <li key={contact.id} className='table-view-cell media'>
               <img className='media-object pull-left img-resize' src={contact.avatar}/>
               <div className='media-body'>{contact.first} {contact.last}</div>
               </li>
