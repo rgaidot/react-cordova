@@ -1,1 +1,1 @@
-export const STORE_CHANGE = 'STORE_CHANGE'
+export const URL = 'https://addressbook-api.herokuapp.com/contacts';

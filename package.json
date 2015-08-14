@@ -22,13 +22,15 @@
     "lint": "eslint ./*.js ./**/*.js"
   },
   "dependencies": {
+    "bluebird": "^2.9.34",
     "flux": "^2.0.3",
-    "jquery": "^2.1.4",
+    "json-loader": "^0.5.2",
     "keymirror": "^0.1.1",
     "lodash": "^3.7.0",
     "react": "^0.13.3",
     "react-hot-loader": "^1.2.7",
-    "react-router": "^0.13.3"
+    "react-router": "^0.13.3",
+    "request": "^2.60.0"
   },
   "devDependencies": {
     "babel": "^5.4.7",

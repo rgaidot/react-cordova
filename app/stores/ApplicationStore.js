@@ -1,11 +1,23 @@
-import ApplicationDispatcher from '../dispatcher/ApplicationDispatcher';
-import ApplicationConstants from '../constants/ApplicationConstants';
+import { register } from '../dispatchers/ApplicationDispatcher';
 import EventEmitter from 'events';
+import ActionTypes from '../constants/ActionTypes';
 
 export default class ApplicationStore extends EventEmitter {
   constructor() {
     super();
     this.data = {};
+  }
+
+  subscribe(actionSubscribe) {
+    this._dispatchToken = register(actionSubscribe());
+  }
+
+  addChangeListener(callback) {
+    this.on('STORE_CHANGE', callback);
+  }
+
+  removeChangeListener(callback) {
+    this.removeListener('STORE_CHANGE', callback);
   }
 
   get(key) {
@@ -14,17 +26,21 @@ export default class ApplicationStore extends EventEmitter {
 
   set(key, value) {
     this.data[key] = value;
-    this.emitChange();
+    this.emitChange('STORE_CHANGE');
   }
 
   remove(key) {
     this.data.delete(key);
-    this.emitChange();
+    this.emitChange('STORE_CHANGE');
   }
 
   setAll(items) {
     this.data = new Set(items);
-    this.emitChange();
+    this.emitChange('STORE_CHANGE');
+  }
+
+  emitChange() {
+    this.emit('STORE_CHANGE');
   }
 
   getAll() {

@@ -1,38 +1,22 @@
 import ApplicationStore from './ApplicationStore';
-import ApplicationDispatcher from '../dispatcher/ApplicationDispatcher';
-
-import { STORE_CHANGE } from '../constants/ApplicationConstants';
+import ActionTypes from '../constants/ActionTypes';
 
 class HomeStore extends ApplicationStore {
   constructor() {
     super();
+    this.subscribe(() => this._registerToActions.bind(this));
   }
 
-  emitChange() {
-    this.emit(STORE_CHANGE);
-  }
-
-  addChangeListener(callback) {
-    this.on(STORE_CHANGE, callback);
-  }
-
-  removeChangeListener(callback) {
-    this.removeListener(STORE_CHANGE, callback);
-  }
+  _registerToActions(action) {
+    switch(action.type) {
+      case ActionTypes.API_SERVICE_SUCCESS:
+        this.setAll(action.body.contacts);
+        break;
+      default:
+        break;
+    }
+    this.emitChange();
+  };
 }
 
-let store = new HomeStore();
-
-
-store.dispatchToken = ApplicationDispatcher.register((action) => {
-  switch(action.type) {
-    case STORE_CHANGE:
-      store.setAll(action.content.contacts);
-      break;
-    default:
-      return;
-  }
-  store.emitChange();
-});
-
-export default store;
+export default new HomeStore();

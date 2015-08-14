@@ -10,6 +10,12 @@ module.exports = {
   resolve: {
     root: [path.join(__dirname, "bower_components")]
   },
+  node: {
+    console: 'empty',
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty'
+  },
   module: {
     loaders: [
       {
@@ -21,19 +27,22 @@ module.exports = {
           stage: 0
         }
       },
+      { test: /\.json$/,
+        loader: 'json-loader'
+      },
       {
         test: /\.(css|scss)$/,
         loader: 'style!css!sass'
       },
-      { 
+      {
         test: /\.(png|woff|ttf|eot|svg)$/,
         loader: 'url-loader?limit=100000'
       }
     ]
   },
   plugins: [
-      new webpack.ResolverPlugin(
-          new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
-      )
+    new webpack.ResolverPlugin(
+      new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
+    )
   ]
 };
