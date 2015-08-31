@@ -21,7 +21,11 @@ export default class ApplicationStore extends EventEmitter {
   }
 
   get(key) {
-    return this.data[key];
+    if(this.data[key] === undefined) {
+      return [];
+    } else {
+      return Array.from(this.data[key]);
+    }
   }
 
   set(key, value) {
